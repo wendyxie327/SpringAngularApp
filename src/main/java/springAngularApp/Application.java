@@ -17,6 +17,10 @@ import springAngularApp.system.configuration.WebSecurityConfig;
 @Import({SpringJpaConfig.class, WebSecurityConfig.class, MvcConfiguration.class})
 public class Application {
 
+	/**
+	 * 此为SpringBoot的入口
+	 * @param args
+	 */
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }

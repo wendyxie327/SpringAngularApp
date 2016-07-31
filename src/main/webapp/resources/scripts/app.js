@@ -1,4 +1,4 @@
-var app = angular.module('myApp',
+var app = angular.module('myApp',	////定义一个ng-app  
     [
         'ui.bootstrap',
         'services',
@@ -12,10 +12,10 @@ var app = angular.module('myApp',
     ]
 );
 
-app.config(function ($translateProvider) {
+app.config(function ($translateProvider) {	//设置路由，负责把url指向不同的方法
     $translateProvider.useUrlLoader('/ws/messageBundle/properties');
     $translateProvider.useCookieStorage();
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('en');	//默认选择语言
     $translateProvider.fallbackLanguage('en');
 });
 
