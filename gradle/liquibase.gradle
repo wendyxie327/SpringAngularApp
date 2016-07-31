@@ -24,7 +24,7 @@ liquibase {
 
 def readApplicationProperties() {
     def props = new Properties()
-    new File("src/main/resources/application.properties").withInputStream {
+    new File("${rootProject.projectDir}/src/main/resources/application.properties").withInputStream {
         stream -> props.load(stream)
     }
     props

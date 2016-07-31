@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin().loginPage("/resources/pages/index.html").permitAll()
                 .defaultSuccessUrl("/home", true)
             .and()
-                .httpBasic()
+                .httpBasic()//配置http基本认证
             .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
