@@ -2,6 +2,7 @@ controllers.controller("LoginPageController", ['$rootScope', '$scope', '$http', 
 
     var authenticate = function (credentials, callback) {
         var headers = credentials ? {
+        	//btoa 将字符串进行Base64编码
             authorization: "Basic " + btoa(credentials.username + ":" + credentials.password)
         } : {};
 

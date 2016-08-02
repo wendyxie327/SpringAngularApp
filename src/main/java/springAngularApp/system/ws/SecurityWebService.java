@@ -10,6 +10,7 @@ public class SecurityWebService {
 
     @RequestMapping("/user")
     public Principal user(Principal user) {
+    	System.out.println("log");
         return user;
     }
 
