@@ -16,7 +16,7 @@ import static java.util.Locale.ENGLISH;
 
 
 @Configuration
-@EnableWebMvc
+@EnableWebMvc   //开启webMVC配置支持
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
     @Bean

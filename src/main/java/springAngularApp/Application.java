@@ -11,9 +11,9 @@ import springAngularApp.system.configuration.SpringJpaConfig;
 import springAngularApp.system.configuration.WebSecurityConfig;
 
 @SpringBootApplication
-@EnableAspectJAutoProxy
-@EnableTransactionManagement(proxyTargetClass = true)
-@EnableJpaRepositories(transactionManagerRef = "txManager", entityManagerFactoryRef = "entityManagerFactory")
+@EnableAspectJAutoProxy //开启对AspectJ自动代理的支持
+@EnableTransactionManagement(proxyTargetClass = true)   //开启注解式事务的支持
+@EnableJpaRepositories(transactionManagerRef = "txManager", entityManagerFactoryRef = "entityManagerFactory")   //开启对Spring DataJPA Repository的支持
 @Import({SpringJpaConfig.class, WebSecurityConfig.class, MvcConfiguration.class})
 public class Application {
 
